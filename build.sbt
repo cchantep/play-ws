@@ -35,8 +35,8 @@ lazy val mimaSettings = mimaDefaultSettings ++ Seq(
 
 lazy val commonSettings = mimaSettings ++ Seq(
   organization := "com.typesafe.play",
-  scalaVersion := "2.12.3",
-  crossScalaVersions := Seq("2.12.3", "2.11.11"),
+  scalaVersion := "2.12.4",
+  crossScalaVersions := Seq("2.12.4", "2.11.12"),
   scalacOptions in (Compile, doc) ++= Seq(
     "-target:jvm-1.8",
     "-deprecation",
@@ -89,7 +89,6 @@ val formattingSettings = Seq(
     .setPreference(SpaceInsideParentheses, false)
     .setPreference(DanglingCloseParenthesis, Preserve)
     .setPreference(PreserveSpaceBeforeArguments, true)
-    .setPreference(DoubleIndentClassDeclaration, true)
 )
 
 val disableDocs = Seq[Setting[_]](

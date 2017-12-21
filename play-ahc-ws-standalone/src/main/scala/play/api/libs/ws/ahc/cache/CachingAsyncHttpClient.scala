@@ -31,9 +31,9 @@ trait TimeoutResponse {
 class CachingAsyncHttpClient(
   underlying: AsyncHttpClient,
   ahcHttpCache: AhcHttpCache)
-    extends AsyncHttpClient
-    with TimeoutResponse
-    with Debug {
+  extends AsyncHttpClient
+  with TimeoutResponse
+  with Debug {
 
   import com.typesafe.play.cachecontrol.ResponseSelectionActions._
   import com.typesafe.play.cachecontrol.ResponseServeActions._

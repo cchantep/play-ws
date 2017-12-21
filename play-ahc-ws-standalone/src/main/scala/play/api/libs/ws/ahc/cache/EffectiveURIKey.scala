@@ -26,10 +26,10 @@ object EffectiveURIKey {
  * A cache entry with an optional expiry time
  */
 case class ResponseEntry(
-    response: CacheableResponse,
-    requestMethod: String,
-    nominatedHeaders: Map[HeaderName, Seq[String]],
-    expiresAt: Option[DateTime]) {
+  response: CacheableResponse,
+  requestMethod: String,
+  nominatedHeaders: Map[HeaderName, Seq[String]],
+  expiresAt: Option[DateTime]) {
 
   /**
    * Has the entry expired yet?

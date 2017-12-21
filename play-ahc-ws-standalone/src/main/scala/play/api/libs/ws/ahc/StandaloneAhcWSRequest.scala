@@ -25,21 +25,21 @@ import scala.concurrent.duration.Duration
  * A Ahc WS Request.
  */
 case class StandaloneAhcWSRequest(
-    client: StandaloneAhcWSClient,
-    url: String,
-    method: String = "GET",
-    body: WSBody = EmptyBody,
-    headers: Map[String, Seq[String]] = TreeMap()(CaseInsensitiveOrdered),
-    queryString: Map[String, Seq[String]] = Map.empty,
-    cookies: Seq[WSCookie] = Seq.empty,
-    calc: Option[WSSignatureCalculator] = None,
-    auth: Option[(String, String, WSAuthScheme)] = None,
-    followRedirects: Option[Boolean] = None,
-    requestTimeout: Option[Int] = None,
-    virtualHost: Option[String] = None,
-    proxyServer: Option[WSProxyServer] = None,
-    disableUrlEncoding: Option[Boolean] = None,
-    private val filters: Seq[WSRequestFilter] = Nil
+  client: StandaloneAhcWSClient,
+  url: String,
+  method: String = "GET",
+  body: WSBody = EmptyBody,
+  headers: Map[String, Seq[String]] = TreeMap()(CaseInsensitiveOrdered),
+  queryString: Map[String, Seq[String]] = Map.empty,
+  cookies: Seq[WSCookie] = Seq.empty,
+  calc: Option[WSSignatureCalculator] = None,
+  auth: Option[(String, String, WSAuthScheme)] = None,
+  followRedirects: Option[Boolean] = None,
+  requestTimeout: Option[Int] = None,
+  virtualHost: Option[String] = None,
+  proxyServer: Option[WSProxyServer] = None,
+  disableUrlEncoding: Option[Boolean] = None,
+  private val filters: Seq[WSRequestFilter] = Nil
 )(implicit materializer: Materializer) extends StandaloneWSRequest with AhcUtilities with WSCookieConverter {
   override type Self = StandaloneWSRequest
   override type Response = StandaloneWSResponse

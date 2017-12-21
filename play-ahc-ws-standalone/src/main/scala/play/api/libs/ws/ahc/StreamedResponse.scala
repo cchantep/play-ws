@@ -24,12 +24,12 @@ import play.shaded.ahc.org.asynchttpclient.HttpResponseBodyPart
  * }}}
  */
 class StreamedResponse(
-    client: StandaloneAhcWSClient,
-    val status: Int,
-    val statusText: String,
-    val uri: java.net.URI,
-    val headers: Map[String, Seq[String]],
-    publisher: Publisher[HttpResponseBodyPart]) extends StandaloneWSResponse with CookieBuilder {
+  client: StandaloneAhcWSClient,
+  val status: Int,
+  val statusText: String,
+  val uri: java.net.URI,
+  val headers: Map[String, Seq[String]],
+  publisher: Publisher[HttpResponseBodyPart]) extends StandaloneWSResponse with CookieBuilder {
 
   /**
    * Get the underlying response object.

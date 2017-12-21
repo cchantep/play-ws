@@ -72,9 +72,9 @@ object AhcWSClientConfigFactory {
  */
 @Singleton
 class AhcWSClientConfigParser @Inject() (
-    wsClientConfig: WSClientConfig,
-    configuration: Config,
-    classLoader: ClassLoader) extends Provider[AhcWSClientConfig] {
+  wsClientConfig: WSClientConfig,
+  configuration: Config,
+  classLoader: ClassLoader) extends Provider[AhcWSClientConfig] {
 
   def get = parse()
 

@@ -21,9 +21,9 @@ class AsyncCachingHandler[T](
   handler: AsyncCompletionHandler[T],
   cache: AhcHttpCache,
   maybeAction: Option[ResponseServeAction])
-    extends AsyncHandler[T]
-    with TimeoutResponse
-    with Debug {
+  extends AsyncHandler[T]
+  with TimeoutResponse
+  with Debug {
 
   private val DATE = "Date"
 

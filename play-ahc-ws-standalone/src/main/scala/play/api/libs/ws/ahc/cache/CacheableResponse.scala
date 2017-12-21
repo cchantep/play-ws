@@ -63,9 +63,9 @@ class CacheableResponseBuilder {
 
 // https://github.com/AsyncHttpClient/async-http-client/blob/2.0/client/src/main/java/org/asynchttpclient/netty/NettyResponse.java
 case class CacheableResponse(
-    status: CacheableHttpResponseStatus,
-    headers: CacheableHttpResponseHeaders,
-    bodyParts: util.List[CacheableHttpResponseBodyPart]) extends Response {
+  status: CacheableHttpResponseStatus,
+  headers: CacheableHttpResponseHeaders,
+  bodyParts: util.List[CacheableHttpResponseBodyPart]) extends Response {
 
   private var cookies: util.List[Cookie] = _
 
@@ -228,7 +228,7 @@ case class CacheableResponse(
 }
 
 case class CacheableHttpResponseHeaders(trailingHeaders: Boolean, headers: HttpHeaders)
-    extends HttpResponseHeaders(headers, trailingHeaders) {
+  extends HttpResponseHeaders(headers, trailingHeaders) {
 
   override def toString: String = {
     s"CacheableHttpResponseHeaders(trailingHeaders = $trailingHeaders, headers = $headers)"
@@ -265,7 +265,7 @@ class CacheableHttpResponseStatus(
   statusCode: Int,
   statusText: String,
   protocolText: String)
-    extends HttpResponseStatus(uri, null) {
+  extends HttpResponseStatus(uri, null) {
   override def getStatusCode: Int = statusCode
 
   override def getProtocolText: String = protocolText

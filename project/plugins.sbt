@@ -9,7 +9,7 @@ addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.5")
 
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.3")
 
-addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")
+addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.8.2")
 
 addSbtPlugin("com.typesafe" % "sbt-mima-plugin" % "0.1.14")
 
